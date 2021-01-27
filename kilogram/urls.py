@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from kilogram.views import IndexView
+from kilogram.views import IndexView, upload
 
 app_name = 'kilogram'
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
+    path('uploads', upload, name='upload'),
 ]
